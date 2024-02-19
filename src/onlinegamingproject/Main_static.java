@@ -21,7 +21,7 @@ public class Main_static
         
         String root = "E:\\";//make sure to replace D:\\ by the current directory where the code exists
         String path = root+"GamingSim\\Data_Static\\"; 
-        int configurations[]={100};//20,40,60,80,100,250,500,750,1000,1250,1500,1750,2000,3000,4000,5000};
+        int configurations[]={20};//20,40,60,80,100,250,500,750,1000,1250,1500,1750,2000,3000,4000,5000};
      
         int instances=100;//Number of instances for each configuration
         int start=99;

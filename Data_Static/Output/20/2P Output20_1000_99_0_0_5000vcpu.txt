@@ -1,0 +1,1 @@
+best Fitness: 2.0 percent: 99.99999990686774 penalty_capacity: 0.0 penalty_latency= 0.0 bestgen 1 exec: 12.0

@@ -1,0 +1,9 @@
+end generate Population: 3.0
+end initialization: 0.0
+end sort: 0.0
+end replicate top nrep solutions: 0.0
+end update fitness value with new lamdaC & lamdaD: 0.0
+end crossover: 7.0
+end mutation: 0.0
+end evaluation: 0.0
+end reproduction: 8.0

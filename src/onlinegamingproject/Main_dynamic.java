@@ -27,10 +27,10 @@ public class Main_dynamic
 
          
          int []velocities = {10,20,40};
-         float [] variations = {0.3f};//, 0.3f};
+         float [] variations = {0.1f};//, 0.3f};
          String [] v_char = {"Low","Medium","High"};//Low
          String [] methods = {"GA","GW"};//, "GW"};
-         int [] configurations = {100};
+         int [] configurations = {20};
          int [] thresholds = {0};//,10}; //gamma
          int [] cap = {5000};
          int timestamps = 3;//144
@@ -104,6 +104,7 @@ public class Main_dynamic
                                   }
                                   catch(Exception ex)
                                   {
+                                      ex.getClass();
                                       bool = true;
                                   }
                               }

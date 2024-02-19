@@ -239,12 +239,18 @@ public class DynamicOperations
         
         gamma = (double)(100 - threshold)/100;
         try {
+//            System.out.println("f1 "+f1.toString());
+//            System.out.println("f2 "+f2.toString());
+//            System.out.println("f6 "+f6.toString());
+//            System.out.println("f7 "+f7.toString());
+//            System.out.println("f3 "+f3.toString());
+//            System.out.println("f4 "+f4.toString());
+            
             GetData(f1);
             calculate_radius();
             getPlayersCoordinates(f6);
             getServersCoordinates(f7);
             retreiveSolution(f2);
-          
             List<Integer> activeNodes = retreiveActiveServers(f3);
             List<Double> serversData = retreiveServersUsage(f4);
             retainRemainedOverallCap(edgeCap[addedC][0], edges, serversData, activeNodes);
@@ -255,7 +261,7 @@ public class DynamicOperations
             Logger.getLogger(DynamicOperations.class.getName()).log(Level.SEVERE, null, ex);
         }
         
-        
+       
         
         if(Ct[0][0] == 1000) addedC =0;
         if(Ct[0][0] == 5000) addedC =1;
@@ -263,7 +269,7 @@ public class DynamicOperations
         sets_org = sets;
         String instance = String.valueOf(config);
         String type;
-        String delimiter = "/";//local \\
+        String delimiter = "\\";//magi /
 
         System.out.println("Start: ");
         Input_Data ipt = dynamic_scenario(animation);
@@ -2199,7 +2205,7 @@ public class DynamicOperations
         while (s.hasNextInt()) {
             surfaces.add(s.nextInt());
         }
-      
+        System.out.println("Finish retaining surface");
         return surfaces.get(config);
     }
     
@@ -2259,6 +2265,7 @@ public class DynamicOperations
         
         sortieEE.flush();
         sortieEE.close();
+       
     }
     
     
