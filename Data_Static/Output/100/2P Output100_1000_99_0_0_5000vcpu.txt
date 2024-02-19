@@ -1,0 +1,8 @@
+best Fitness: 418.6839312305374 percent: 99.99998050351016 penalty_capacity: 0.0 penalty_latency= 408.47969138484495 bestgen 1 exec: 117.0
+best Fitness: 380.2883125089853 percent: 9.17054987247899 penalty_capacity: 0.0 penalty_latency= 370.10326087854605 bestgen 2 exec: 122.0
+best Fitness: 281.1968080343827 percent: 26.056941855729875 penalty_capacity: 0.0 penalty_latency= 271.06127739568484 bestgen 10 exec: 157.0
+best Fitness: 72.86645761154344 percent: 74.08702533969237 penalty_capacity: 0.0 penalty_latency= 62.835040091497696 bestgen 12 exec: 160.0
+best Fitness: 20.134650345462845 percent: 72.36773818098557 penalty_capacity: 0.0 penalty_latency= 10.129585552686507 bestgen 18 exec: 168.0
+best Fitness: 11.894285852418903 percent: 40.92628554089011 penalty_capacity: 0.0 penalty_latency= 1.8933391828274915 bestgen 20 exec: 175.0
+best Fitness: 10.945953353686662 percent: 7.973009144886009 penalty_capacity: 0.0 penalty_latency= 0.945480613379973 bestgen 28 exec: 184.0
+best Fitness: 10.0 percent: 8.64203713574258 penalty_capacity: 0.0 penalty_latency= 0.0 bestgen 41 exec: 288.0

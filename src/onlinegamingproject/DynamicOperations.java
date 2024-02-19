@@ -240,7 +240,7 @@ public class DynamicOperations
         gamma = (double)(100 - threshold)/100;
         try {
             GetData(f1);
-             calculate_radius();
+            calculate_radius();
             getPlayersCoordinates(f6);
             getServersCoordinates(f7);
             retreiveSolution(f2);

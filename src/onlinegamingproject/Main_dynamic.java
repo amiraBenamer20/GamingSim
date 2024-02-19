@@ -19,23 +19,23 @@ public class Main_dynamic
    
      public static void main(String args[])
      {
-            int [] all_instances = {100};//{20,40,60,80,100,250,500,750,1000,1250,1500,1750,2000,3000,4000,5000};
+            int [] all_instances ={20,40,60,80,100,250,500,750,1000,1250,1500,1750,2000,3000,4000,5000};
 
-        String root = "D:\\";//make sure to replace D:\\ by the current directory where the code exists
-        String pathStatic = root+"OnlineGamingProject\\Data_Static\\"; 
-        String pathDyanmic = root+"OnlineGamingProject\\Data_Dynamic\\";
+        String root = "E:\\";//make sure to replace D:\\ by the current directory where the code exists
+        String pathStatic = root+"GamingSim\\Data_Static\\";
+        String pathDyanmic = root+"GamingSim\\Data_Dynamic\\";
 
          
          int []velocities = {10,20,40};
          float [] variations = {0.3f};//, 0.3f};
          String [] v_char = {"Low","Medium","High"};//Low
          String [] methods = {"GA","GW"};//, "GW"};
-         int [] configurations = {5000};
+         int [] configurations = {100};
          int [] thresholds = {0};//,10}; //gamma
          int [] cap = {5000};
          int timestamps = 3;//144
-         int instances=1;//number of instances
-         int start=0;
+         int instances=100;//number of instances
+         int start=99;
          for(int id=start;id<instances;id++)
          {
              for(int change = 0; change< variations.length;change++)
@@ -64,27 +64,27 @@ public class Main_dynamic
                            System.out.println("-------------Velocity: "+v_char[v]+"---------------");
                           for(int t=1;t < timestamps;t++)
                           {
-                              f5 =  pathStatic+"Input/Surface"+cap[c]+"vcpu_"+id+"_"+thresholds[th]+".txt";
+                              f5 =  pathStatic+"Input\\Surface"+cap[c]+"vcpu_"+id+"_"+thresholds[th]+".txt";
                              if(t-1 == 0)
                               {
-                                 f1 =  pathStatic+"DataSet/"+configurations[g]+"/data"+configurations[g]+"_"+id+"_"+cap[c]+"_"+thresholds[th]+".txt";
+                                 f1 =  pathStatic+"DataSet\\"+configurations[g]+"\\data"+configurations[g]+"_"+id+"_"+cap[c]+"_"+thresholds[th]+".txt";
                                                                
                                  //f2 =  pathStatic+"Solution/"+configurations[g]+"/GA_Impr_more_5000_4_65"+"_0"+"_"+thresholds[th]+"_"+cap[c]+"vcpu.txt";//configurations[g]+"_"+id+"_"+str+"_0"+"_"+thresholds[th]+"_"+cap[c]+"vcpu.txt";
-                                 f2 = pathStatic+"Solution/"+configurations[g]+"/"+configurations[g]+"_"+id+"_GA_"+0+"_"+thresholds[th]+"_"+cap[c]+"vcpu.txt";
-                                 f4 =  pathStatic+"ServerData/"+configurations[g]+"/"+configurations[g]+"_"+id+"_GA_"+0+"_"+thresholds[th]+"_"+cap[c]+"vcpu.txt";//+configurations[g]+"/"+configurations[g]+"_"+id+"_"+str+"_0"+"_"+thresholds[th]+"_"+cap[c]+"vcpu.txt";
-                                 f3 =  pathStatic+"ActiveServers/"+configurations[g]+"/"+configurations[g]+"_"+id+"_GA_"+0+"_"+thresholds[th]+"_"+cap[c]+"vcpu.txt";//+configurations[g]+"/"+configurations[g]+"_"+id+"_"+str+"_0_"+thresholds[th]+"_"+cap[c]+"vcpu.txt"; 
-                                 f6 =  pathStatic+"CoordinatesSet/"+configurations[g]+"/players_"+configurations[g]+"_"+id+"_"+thresholds[th]+"_0"+"_"+cap[c]+"vcpu.txt";
-                                 f7 =  pathStatic+"CoordinatesSet/"+configurations[g]+"/edges_"+configurations[g]+"_"+id+"_"+thresholds[th]+"_0"+"_"+cap[c]+"vcpu.txt";
+                                 f2 = pathStatic+"Solution\\"+configurations[g]+"\\"+configurations[g]+"_"+id+"_GA_"+0+"_"+thresholds[th]+"_"+cap[c]+"vcpu.txt";
+                                 f4 =  pathStatic+"ServerData\\"+configurations[g]+"\\"+configurations[g]+"_"+id+"_GA_"+0+"_"+thresholds[th]+"_"+cap[c]+"vcpu.txt";//+configurations[g]+"/"+configurations[g]+"_"+id+"_"+str+"_0"+"_"+thresholds[th]+"_"+cap[c]+"vcpu.txt";
+                                 f3 =  pathStatic+"ActiveServers\\"+configurations[g]+"\\"+configurations[g]+"_"+id+"_GA_"+0+"_"+thresholds[th]+"_"+cap[c]+"vcpu.txt";//+configurations[g]+"/"+configurations[g]+"_"+id+"_"+str+"_0_"+thresholds[th]+"_"+cap[c]+"vcpu.txt"; 
+                                 f6 =  pathStatic+"CoordinatesSet\\"+configurations[g]+"\\players_"+configurations[g]+"_"+id+"_"+thresholds[th]+"_0"+"_"+cap[c]+"vcpu.txt";
+                                 f7 =  pathStatic+"CoordinatesSet\\"+configurations[g]+"\\edges_"+configurations[g]+"_"+id+"_"+thresholds[th]+"_0"+"_"+cap[c]+"vcpu.txt";
 
                              }
                              else
                              {
-                                   f1 = pathDyanmic+"DataSet/"+configurations[g]+"/t_"+(t-1)+"_"+"Without_Q_"+id+"_"+v_char[v]+"_"+thresholds[th]+"_"+variations[change]+".txt";
-                                   f2 = pathDyanmic+"Solution/"+configurations[g]+"/static"+"_"+configurations[g]+"_"+id+"_"+str+"_"+0+"_"+thresholds[th]+"_"+cap[c]+"vcpu_"+(t-1)+"_"+v_char[v]+"_"+variations[change]+".txt";
-                                   f4 = pathDyanmic+"ServerData/"+configurations[g]+"/static_"+configurations[g]+"_"+id+"_"+str+"_"+0+"_"+thresholds[th]+"_"+cap[c]+"vcpu_"+(t-1)+"_"+v_char[v]+"_"+variations[change]+".txt";
-                                   f3 = pathDyanmic+"ActiveServers/"+configurations[g]+"/t"+(t-1)+"/static_"+configurations[g]+"_"+id+"_"+str+"_"+0+"_"+thresholds[th]+"_"+v_char[v]+"_"+variations[change]+"_"+cap[c]+"vcpu_"+(t-1)+".txt";
-                                   f6 = pathDyanmic+"CoordinatesSet/"+configurations[g]+"/players_t_"+(t-1)+"_Without_Q_"+id+"_"+v_char[v]+"_"+thresholds[th]+"_"+variations[change]+".txt";
-                                   f7 = pathDyanmic+"CoordinatesSet/"+configurations[g]+"/edges_t_"+(t-1)+"_Without_Q_"+id+"_"+v_char[v]+"_"+thresholds[th]+"_"+variations[change]+".txt";
+                                   f1 = pathDyanmic+"DataSet\\"+configurations[g]+"\\t_"+(t-1)+"_"+"Without_Q_"+id+"_"+v_char[v]+"_"+thresholds[th]+"_"+variations[change]+".txt";
+                                   f2 = pathDyanmic+"Solution\\"+configurations[g]+"\\static"+"_"+configurations[g]+"_"+id+"_"+str+"_"+0+"_"+thresholds[th]+"_"+cap[c]+"vcpu_"+(t-1)+"_"+v_char[v]+"_"+variations[change]+".txt";
+                                   f4 = pathDyanmic+"ServerData\\"+configurations[g]+"\\static_"+configurations[g]+"_"+id+"_"+str+"_"+0+"_"+thresholds[th]+"_"+cap[c]+"vcpu_"+(t-1)+"_"+v_char[v]+"_"+variations[change]+".txt";
+                                   f3 = pathDyanmic+"ActiveServers\\"+configurations[g]+"\\t"+(t-1)+"/static_"+configurations[g]+"_"+id+"_"+str+"_"+0+"_"+thresholds[th]+"_"+v_char[v]+"_"+variations[change]+"_"+cap[c]+"vcpu_"+(t-1)+".txt";
+                                   f6 = pathDyanmic+"CoordinatesSet\\"+configurations[g]+"\\players_t_"+(t-1)+"_Without_Q_"+id+"_"+v_char[v]+"_"+thresholds[th]+"_"+variations[change]+".txt";
+                                   f7 = pathDyanmic+"CoordinatesSet\\"+configurations[g]+"\\edges_t_"+(t-1)+"_Without_Q_"+id+"_"+v_char[v]+"_"+thresholds[th]+"_"+variations[change]+".txt";
                              }
 
 

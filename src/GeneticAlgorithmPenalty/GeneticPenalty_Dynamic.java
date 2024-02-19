@@ -5,7 +5,7 @@
  */
 package GeneticAlgorithmPenalty;
 
-import GeneticAlgorithmPenalty_Dynamic.*;
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
@@ -224,61 +224,61 @@ public class GeneticPenalty_Dynamic
           try
         {
             
-            sortieQuality = new PrintWriter(new FileWriter(path+"/Quality/"+scenario+"_"+initial_config+"_"+str+"_"+id+"_"+rerun+"_"+threshold+"_"+velocity+"_"+variation+"_"+cap+"vcpu.txt",true));
-            sortieObj = new PrintWriter(new FileWriter(path+"/Obj/"+scenario+"_"+initial_config+"_"+str+"_"+id+"_"+rerun+"_"+threshold+"_"+velocity+"_"+variation+"_"+cap+"vcpu.txt",true));
-            sortieAllocationCost = new PrintWriter(new FileWriter(path+"/AllocationCost/"+scenario+"_"+initial_config+"_"+str+"_"+id+"_"+rerun+"_"+threshold+"_"+velocity+"_"+variation+"_"+cap+"vcpu.txt",true));
-            sortieExec = new PrintWriter(new FileWriter(path+"/Exec/"+scenario+"_"+initial_config+"_"+str+"_"+id+"_"+rerun+"_"+threshold+"_"+velocity+"_"+variation+"_"+cap+"vcpu.txt",true));
-            sortieNbofUS = new PrintWriter(new FileWriter(path+"/NumberOfUS/"+scenario+"_"+initial_config+"_"+str+"_"+id+"_"+rerun+"_"+threshold+"_"+velocity+"_"+variation+"_"+cap+"vcpu.txt",true));
-            sortieBestIter = new PrintWriter(new FileWriter(path+"/BestIter/"+scenario+"_"+initial_config+"_"+str+"_"+id+"_"+rerun+"_"+threshold+"_"+variation+"_"+cap+"vcpu.txt",true));
-            sortieViolationCapr = new PrintWriter(new FileWriter(path+"/ViolatedCap/"+scenario+"_"+initial_config+"_"+str+"_"+id+"_"+rerun+"_"+threshold+"_"+velocity+"_"+variation+"_"+cap+"vcpu.txt",true));
-            sortieViolationDead = new PrintWriter(new FileWriter(path+"/ViolatedDead/"+scenario+"_"+initial_config+"_"+str+"_"+id+"_"+rerun+"_"+threshold+"_"+velocity+"_"+variation+"_"+cap+"vcpu.txt",true));
+            sortieQuality = new PrintWriter(new FileWriter(path+"\\Quality\\"+scenario+"_"+initial_config+"_"+str+"_"+id+"_"+rerun+"_"+threshold+"_"+velocity+"_"+variation+"_"+cap+"vcpu.txt",true));
+            sortieObj = new PrintWriter(new FileWriter(path+"\\Obj\\"+scenario+"_"+initial_config+"_"+str+"_"+id+"_"+rerun+"_"+threshold+"_"+velocity+"_"+variation+"_"+cap+"vcpu.txt",true));
+            sortieAllocationCost = new PrintWriter(new FileWriter(path+"\\AllocationCost\\"+scenario+"_"+initial_config+"_"+str+"_"+id+"_"+rerun+"_"+threshold+"_"+velocity+"_"+variation+"_"+cap+"vcpu.txt",true));
+            sortieExec = new PrintWriter(new FileWriter(path+"\\Exec\\"+scenario+"_"+initial_config+"_"+str+"_"+id+"_"+rerun+"_"+threshold+"_"+velocity+"_"+variation+"_"+cap+"vcpu.txt",true));
+            sortieNbofUS = new PrintWriter(new FileWriter(path+"\\NumberOfUS\\"+scenario+"_"+initial_config+"_"+str+"_"+id+"_"+rerun+"_"+threshold+"_"+velocity+"_"+variation+"_"+cap+"vcpu.txt",true));
+            sortieBestIter = new PrintWriter(new FileWriter(path+"\\BestIter\\"+scenario+"_"+initial_config+"_"+str+"_"+id+"_"+rerun+"_"+threshold+"_"+variation+"_"+cap+"vcpu.txt",true));
+            sortieViolationCapr = new PrintWriter(new FileWriter(path+"\\ViolatedCap\\"+scenario+"_"+initial_config+"_"+str+"_"+id+"_"+rerun+"_"+threshold+"_"+velocity+"_"+variation+"_"+cap+"vcpu.txt",true));
+            sortieViolationDead = new PrintWriter(new FileWriter(path+"\\ViolatedDead\\"+scenario+"_"+initial_config+"_"+str+"_"+id+"_"+rerun+"_"+threshold+"_"+velocity+"_"+variation+"_"+cap+"vcpu.txt",true));
             //sortiePlacedServers = new PrintWriter(new FileWriter(path+"/ActiveServers/"+initial_config+"/"+scenario+"_"+initial_config+"_"+id+"_"+str+"_"+rerun+"_"+threshold+"_"+velocity+"_"+cap+"vcpu_"+t+".txt"));
-            sortieViolationMig = new PrintWriter(new FileWriter(path+"/ViolatedMig/"+scenario+"_"+initial_config+"_"+str+"_"+id+"_"+rerun+"_"+threshold+"_"+velocity+"_"+variation+"_"+cap+"vcpu.txt",true));
-            sortieMigration = new PrintWriter(new FileWriter(path+"/Migration/"+scenario+"_"+initial_config+"_"+str+"_"+id+"_"+rerun+"_"+threshold+"_"+velocity+"_"+variation+"_"+cap+"vcpu.txt",true));
-            sortieSRate= new PrintWriter(new FileWriter( path+"/GroupsAcceptanceRate/"+scenario+"_"+initial_config+"_"+str+"_"+id+"_"+rerun+"_"+threshold+"_"+velocity+"_"+variation+"_"+cap+"vcpu.txt",true));
+            sortieViolationMig = new PrintWriter(new FileWriter(path+"\\ViolatedMig\\"+scenario+"_"+initial_config+"_"+str+"_"+id+"_"+rerun+"_"+threshold+"_"+velocity+"_"+variation+"_"+cap+"vcpu.txt",true));
+            sortieMigration = new PrintWriter(new FileWriter(path+"\\Migration\\"+scenario+"_"+initial_config+"_"+str+"_"+id+"_"+rerun+"_"+threshold+"_"+velocity+"_"+variation+"_"+cap+"vcpu.txt",true));
+            sortieSRate= new PrintWriter(new FileWriter( path+"\\GroupsAcceptanceRate\\"+scenario+"_"+initial_config+"_"+str+"_"+id+"_"+rerun+"_"+threshold+"_"+velocity+"_"+variation+"_"+cap+"vcpu.txt",true));
                 
             
-            sortieQualityT = new PrintWriter(new FileWriter(path+"/Quality/t"+t+"/"+scenario+"_"+str+"_"+id+"_"+rerun+"_"+threshold+"_"+velocity+"_"+variation+"_"+cap+"vcpu.txt",true));
-            sortieObjT = new PrintWriter(new FileWriter(path+"/Obj/t"+t+"/"+scenario+"_"+str+"_"+id+"_"+rerun+"_"+threshold+"_"+velocity+"_"+variation+"_"+cap+"vcpu.txt",true));
-            sortieAllocationCostT = new PrintWriter(new FileWriter(path+"/AllocationCost/t"+t+"/"+scenario+"_"+str+"_"+id+"_"+rerun+"_"+threshold+"_"+velocity+"_"+variation+"_"+cap+"vcpu.txt",true));
-            sortieExecT = new PrintWriter(new FileWriter(path+"/Exec/t"+t+"/"+scenario+"_"+str+"_"+id+"_"+rerun+"_"+threshold+"_"+velocity+"_"+variation+"_"+cap+"vcpu.txt",true));
-            sortieNbofUST = new PrintWriter(new FileWriter(path+"/NumberOfUS/t"+t+"/"+scenario+"_"+str+"_"+id+"_"+rerun+"_"+threshold+"_"+velocity+"_"+variation+"_"+cap+"vcpu.txt",true));
-            sortieViolationCaprT = new PrintWriter(new FileWriter(path+"/ViolatedCap/t"+t+"/"+scenario+"_"+str+"_"+id+"_"+rerun+"_"+threshold+"_"+velocity+"_"+variation+"_"+cap+"vcpu.txt",true));
-            sortieViolationDeadT = new PrintWriter(new FileWriter(path+"/ViolatedDead/t"+t+"/"+scenario+"_"+str+"_"+id+"_"+rerun+"_"+threshold+"_"+velocity+"_"+variation+"_"+cap+"vcpu.txt",true));
-            sortiePlacedServersT = new PrintWriter(new FileWriter(path+"/ActiveServers/"+initial_config+"/t"+t+"/"+scenario+"_"+initial_config+"_"+id+"_"+str+"_"+rerun+"_"+threshold+"_"+velocity+"_"+variation+"_"+cap+"vcpu_"+t+".txt",true));
-            sortieViolationMigT = new PrintWriter(new FileWriter(path+"/ViolatedMig/t"+t+"/"+scenario+"_"+str+"_"+id+"_"+rerun+"_"+threshold+"_"+velocity+"_"+variation+"_"+cap+"vcpu.txt",true));
-            sortieMigrationT = new PrintWriter(new FileWriter(path+"/Migration/t"+t+"/"+scenario+"_"+str+"_"+id+"_"+rerun+"_"+threshold+"_"+velocity+"_"+variation+"_"+cap+"vcpu.txt",true));
-            sortieSRateT= new PrintWriter(new FileWriter( path+"/GroupsAcceptanceRate/t"+t+"/"+scenario+"_"+str+"_"+id+"_"+rerun+"_"+threshold+"_"+velocity+"_"+variation+"_"+cap+"vcpu.txt",true));
+            sortieQualityT = new PrintWriter(new FileWriter(path+"\\Quality\\t"+t+"\\"+scenario+"_"+str+"_"+id+"_"+rerun+"_"+threshold+"_"+velocity+"_"+variation+"_"+cap+"vcpu.txt",true));
+            sortieObjT = new PrintWriter(new FileWriter(path+"\\Obj\\t"+t+"\\"+scenario+"_"+str+"_"+id+"_"+rerun+"_"+threshold+"_"+velocity+"_"+variation+"_"+cap+"vcpu.txt",true));
+            sortieAllocationCostT = new PrintWriter(new FileWriter(path+"/AllocationCost\\t"+t+"\\"+scenario+"_"+str+"_"+id+"_"+rerun+"_"+threshold+"_"+velocity+"_"+variation+"_"+cap+"vcpu.txt",true));
+            sortieExecT = new PrintWriter(new FileWriter(path+"\\Exec\\t"+t+"\\"+scenario+"_"+str+"_"+id+"_"+rerun+"_"+threshold+"_"+velocity+"_"+variation+"_"+cap+"vcpu.txt",true));
+            sortieNbofUST = new PrintWriter(new FileWriter(path+"\\NumberOfUS\\t"+t+"\\"+scenario+"_"+str+"_"+id+"_"+rerun+"_"+threshold+"_"+velocity+"_"+variation+"_"+cap+"vcpu.txt",true));
+            sortieViolationCaprT = new PrintWriter(new FileWriter(path+"\\ViolatedCap\\t"+t+"\\"+scenario+"_"+str+"_"+id+"_"+rerun+"_"+threshold+"_"+velocity+"_"+variation+"_"+cap+"vcpu.txt",true));
+            sortieViolationDeadT = new PrintWriter(new FileWriter(path+"\\ViolatedDead\\t"+t+"\\"+scenario+"_"+str+"_"+id+"_"+rerun+"_"+threshold+"_"+velocity+"_"+variation+"_"+cap+"vcpu.txt",true));
+            sortiePlacedServersT = new PrintWriter(new FileWriter(path+"\\ActiveServers\\"+initial_config+"\\t"+t+"\\"+scenario+"_"+initial_config+"_"+id+"_"+str+"_"+rerun+"_"+threshold+"_"+velocity+"_"+variation+"_"+cap+"vcpu_"+t+".txt",true));
+            sortieViolationMigT = new PrintWriter(new FileWriter(path+"\\ViolatedMig\\t"+t+"\\"+scenario+"_"+str+"_"+id+"_"+rerun+"_"+threshold+"_"+velocity+"_"+variation+"_"+cap+"vcpu.txt",true));
+            sortieMigrationT = new PrintWriter(new FileWriter(path+"\\Migration\\t"+t+"\\"+scenario+"_"+str+"_"+id+"_"+rerun+"_"+threshold+"_"+velocity+"_"+variation+"_"+cap+"vcpu.txt",true));
+            sortieSRateT= new PrintWriter(new FileWriter( path+"\\GroupsAcceptanceRate\\t"+t+"\\"+scenario+"_"+str+"_"+id+"_"+rerun+"_"+threshold+"_"+velocity+"_"+variation+"_"+cap+"vcpu.txt",true));
   
         } 
           catch (IOException ex)
           {
 
-            sortieQuality = new PrintWriter(new FileWriter(path+"/Quality/"+scenario+"_"+initial_config+"_"+str+"_"+id+"_"+rerun+"_"+threshold+"_"+velocity+"_"+variation+"_"+cap+"vcpu.txt"));
-            sortieObj = new PrintWriter(new FileWriter(path+"/Obj/"+scenario+"_"+initial_config+"_"+str+"_"+id+"_"+rerun+"_"+threshold+"_"+velocity+"_"+variation+"_"+cap+"vcpu.txt"));
-            sortieAllocationCost = new PrintWriter(new FileWriter(path+"/AllocationCost/"+scenario+"_"+initial_config+"_"+str+"_"+id+"_"+rerun+"_"+threshold+"_"+velocity+"_"+variation+"_"+cap+"vcpu.txt"));
-            sortieExec = new PrintWriter(new FileWriter(path+"/Exec/"+scenario+"_"+initial_config+"_"+str+"_"+id+"_"+rerun+"_"+threshold+"_"+velocity+"_"+variation+"_"+cap+"vcpu.txt"));
-            sortieNbofUS = new PrintWriter(new FileWriter(path+"/NumberOfUS/"+scenario+"_"+initial_config+"_"+str+"_"+id+"_"+rerun+"_"+threshold+"_"+velocity+"_"+variation+"_"+cap+"vcpu.txt"));
-            sortieBestIter = new PrintWriter(new FileWriter(path+"/BestIter/"+scenario+"_"+initial_config+"_"+str+"_"+id+"_"+rerun+"_"+threshold+"_"+variation+"_"+cap+"vcpu.txt"));
-            sortieViolationCapr = new PrintWriter(new FileWriter(path+"/ViolatedCap/"+scenario+"_"+initial_config+"_"+str+"_"+id+"_"+rerun+"_"+threshold+"_"+velocity+"_"+variation+"_"+cap+"vcpu.txt"));
-            sortieViolationDead = new PrintWriter(new FileWriter(path+"/ViolatedDead/"+scenario+"_"+initial_config+"_"+str+"_"+id+"_"+rerun+"_"+threshold+"_"+velocity+"_"+variation+"_"+cap+"vcpu.txt"));
+            sortieQuality = new PrintWriter(new FileWriter(path+"\\Quality\\"+scenario+"_"+initial_config+"_"+str+"_"+id+"_"+rerun+"_"+threshold+"_"+velocity+"_"+variation+"_"+cap+"vcpu.txt"));
+            sortieObj = new PrintWriter(new FileWriter(path+"\\Obj\\"+scenario+"_"+initial_config+"_"+str+"_"+id+"_"+rerun+"_"+threshold+"_"+velocity+"_"+variation+"_"+cap+"vcpu.txt"));
+            sortieAllocationCost = new PrintWriter(new FileWriter(path+"\\AllocationCost\\"+scenario+"_"+initial_config+"_"+str+"_"+id+"_"+rerun+"_"+threshold+"_"+velocity+"_"+variation+"_"+cap+"vcpu.txt"));
+            sortieExec = new PrintWriter(new FileWriter(path+"\\Exec\\"+scenario+"_"+initial_config+"_"+str+"_"+id+"_"+rerun+"_"+threshold+"_"+velocity+"_"+variation+"_"+cap+"vcpu.txt"));
+            sortieNbofUS = new PrintWriter(new FileWriter(path+"\\NumberOfUS\\"+scenario+"_"+initial_config+"_"+str+"_"+id+"_"+rerun+"_"+threshold+"_"+velocity+"_"+variation+"_"+cap+"vcpu.txt"));
+            sortieBestIter = new PrintWriter(new FileWriter(path+"\\BestIter\\"+scenario+"_"+initial_config+"_"+str+"_"+id+"_"+rerun+"_"+threshold+"_"+variation+"_"+cap+"vcpu.txt"));
+            sortieViolationCapr = new PrintWriter(new FileWriter(path+"\\ViolatedCap\\"+scenario+"_"+initial_config+"_"+str+"_"+id+"_"+rerun+"_"+threshold+"_"+velocity+"_"+variation+"_"+cap+"vcpu.txt"));
+            sortieViolationDead = new PrintWriter(new FileWriter(path+"\\ViolatedDead\\"+scenario+"_"+initial_config+"_"+str+"_"+id+"_"+rerun+"_"+threshold+"_"+velocity+"_"+variation+"_"+cap+"vcpu.txt"));
             //sortiePlacedServers = new PrintWriter(new FileWriter(path+"/ActiveServers/"+initial_config+"/"+scenario+"_"+initial_config+"_"+id+"_"+str+"_"+rerun+"_"+threshold+"_"+velocity+"_"+cap+"vcpu_"+t+".txt"));
-            sortieViolationMig = new PrintWriter(new FileWriter(path+"/ViolatedMig/"+scenario+"_"+initial_config+"_"+str+"_"+id+"_"+rerun+"_"+threshold+"_"+velocity+"_"+variation+"_"+cap+"vcpu.txt"));
-            sortieMigration = new PrintWriter(new FileWriter(path+"/Migration/"+scenario+"_"+initial_config+"_"+str+"_"+id+"_"+rerun+"_"+threshold+"_"+velocity+"_"+variation+"_"+cap+"vcpu.txt"));
-            sortieSRate= new PrintWriter(new FileWriter( path+"/GroupsAcceptanceRate/"+scenario+"_"+initial_config+"_"+str+"_"+id+"_"+rerun+"_"+threshold+"_"+velocity+"_"+variation+"_"+cap+"vcpu.txt"));
+            sortieViolationMig = new PrintWriter(new FileWriter(path+"\\ViolatedMig\\"+scenario+"_"+initial_config+"_"+str+"_"+id+"_"+rerun+"_"+threshold+"_"+velocity+"_"+variation+"_"+cap+"vcpu.txt"));
+            sortieMigration = new PrintWriter(new FileWriter(path+"\\Migration\\"+scenario+"_"+initial_config+"_"+str+"_"+id+"_"+rerun+"_"+threshold+"_"+velocity+"_"+variation+"_"+cap+"vcpu.txt"));
+            sortieSRate= new PrintWriter(new FileWriter( path+"\\GroupsAcceptanceRate\\"+scenario+"_"+initial_config+"_"+str+"_"+id+"_"+rerun+"_"+threshold+"_"+velocity+"_"+variation+"_"+cap+"vcpu.txt"));
                 
             
-            sortieQualityT = new PrintWriter(new FileWriter(path+"/Quality/t"+t+"/"+scenario+"_"+str+"_"+id+"_"+rerun+"_"+threshold+"_"+velocity+"_"+variation+"_"+cap+"vcpu.txt"));
-            sortieObjT = new PrintWriter(new FileWriter(path+"/Obj/t"+t+"/"+scenario+"_"+str+"_"+id+"_"+rerun+"_"+threshold+"_"+velocity+"_"+variation+"_"+cap+"vcpu.txt"));
-            sortieAllocationCostT = new PrintWriter(new FileWriter(path+"/AllocationCost/t"+t+"/"+scenario+"_"+str+"_"+id+"_"+rerun+"_"+threshold+"_"+velocity+"_"+variation+"_"+cap+"vcpu.txt"));
-            sortieExecT = new PrintWriter(new FileWriter(path+"/Exec/t"+t+"/"+scenario+"_"+str+"_"+id+"_"+rerun+"_"+threshold+"_"+velocity+"_"+variation+"_"+cap+"vcpu.txt"));
-            sortieNbofUST = new PrintWriter(new FileWriter(path+"/NumberOfUS/t"+t+"/"+scenario+"_"+str+"_"+id+"_"+rerun+"_"+threshold+"_"+velocity+"_"+variation+"_"+cap+"vcpu.txt"));
-            sortieViolationCaprT = new PrintWriter(new FileWriter(path+"/ViolatedCap/t"+t+"/"+scenario+"_"+str+"_"+id+"_"+rerun+"_"+threshold+"_"+velocity+"_"+variation+"_"+cap+"vcpu.txt"));
-            sortieViolationDeadT = new PrintWriter(new FileWriter(path+"/ViolatedDead/t"+t+"/"+scenario+"_"+str+"_"+id+"_"+rerun+"_"+threshold+"_"+velocity+"_"+variation+"_"+cap+"vcpu.txt"));
-            sortiePlacedServersT = new PrintWriter(new FileWriter(path+"/ActiveServers/"+initial_config+"/t"+t+"/"+scenario+"_"+initial_config+"_"+id+"_"+str+"_"+rerun+"_"+threshold+"_"+velocity+"_"+variation+"_"+cap+"vcpu_"+t+".txt"));
-            sortieViolationMigT = new PrintWriter(new FileWriter(path+"/ViolatedMig/t"+t+"/"+scenario+"_"+str+"_"+id+"_"+rerun+"_"+threshold+"_"+velocity+"_"+variation+"_"+cap+"vcpu.txt"));
-            sortieMigrationT = new PrintWriter(new FileWriter(path+"/Migration/t"+t+"/"+scenario+"_"+str+"_"+id+"_"+rerun+"_"+threshold+"_"+velocity+"_"+variation+"_"+cap+"vcpu.txt"));
-            sortieSRateT= new PrintWriter(new FileWriter( path+"/GroupsAcceptanceRate/t"+t+"/"+scenario+"_"+str+"_"+id+"_"+rerun+"_"+threshold+"_"+velocity+"_"+variation+"_"+cap+"vcpu.txt"));
+            sortieQualityT = new PrintWriter(new FileWriter(path+"\\Quality\\t"+t+"\\"+scenario+"_"+str+"_"+id+"_"+rerun+"_"+threshold+"_"+velocity+"_"+variation+"_"+cap+"vcpu.txt"));
+            sortieObjT = new PrintWriter(new FileWriter(path+"\\Obj\\t"+t+"\\"+scenario+"_"+str+"_"+id+"_"+rerun+"_"+threshold+"_"+velocity+"_"+variation+"_"+cap+"vcpu.txt"));
+            sortieAllocationCostT = new PrintWriter(new FileWriter(path+"\\AllocationCost\\t"+t+"\\"+scenario+"_"+str+"_"+id+"_"+rerun+"_"+threshold+"_"+velocity+"_"+variation+"_"+cap+"vcpu.txt"));
+            sortieExecT = new PrintWriter(new FileWriter(path+"\\Exec\\t"+t+"\\"+scenario+"_"+str+"_"+id+"_"+rerun+"_"+threshold+"_"+velocity+"_"+variation+"_"+cap+"vcpu.txt"));
+            sortieNbofUST = new PrintWriter(new FileWriter(path+"\\NumberOfUS\\t"+t+"\\"+scenario+"_"+str+"_"+id+"_"+rerun+"_"+threshold+"_"+velocity+"_"+variation+"_"+cap+"vcpu.txt"));
+            sortieViolationCaprT = new PrintWriter(new FileWriter(path+"\\ViolatedCap\\t"+t+"\\"+scenario+"_"+str+"_"+id+"_"+rerun+"_"+threshold+"_"+velocity+"_"+variation+"_"+cap+"vcpu.txt"));
+            sortieViolationDeadT = new PrintWriter(new FileWriter(path+"\\ViolatedDead\\t"+t+"\\"+scenario+"_"+str+"_"+id+"_"+rerun+"_"+threshold+"_"+velocity+"_"+variation+"_"+cap+"vcpu.txt"));
+            sortiePlacedServersT = new PrintWriter(new FileWriter(path+"\\ActiveServers\\"+initial_config+"\\t"+t+"\\"+scenario+"_"+initial_config+"_"+id+"_"+str+"_"+rerun+"_"+threshold+"_"+velocity+"_"+variation+"_"+cap+"vcpu_"+t+".txt"));
+            sortieViolationMigT = new PrintWriter(new FileWriter(path+"\\ViolatedMig\\t"+t+"\\"+scenario+"_"+str+"_"+id+"_"+rerun+"_"+threshold+"_"+velocity+"_"+variation+"_"+cap+"vcpu.txt"));
+            sortieMigrationT = new PrintWriter(new FileWriter(path+"\\Migration\\t"+t+"\\"+scenario+"_"+str+"_"+id+"_"+rerun+"_"+threshold+"_"+velocity+"_"+variation+"_"+cap+"vcpu.txt"));
+            sortieSRateT= new PrintWriter(new FileWriter( path+"\\GroupsAcceptanceRate\\t"+t+"\\"+scenario+"_"+str+"_"+id+"_"+rerun+"_"+threshold+"_"+velocity+"_"+variation+"_"+cap+"vcpu.txt"));
 
         }
 
@@ -407,8 +407,8 @@ public class GeneticPenalty_Dynamic
         PrintWriter sortieSolution = null;
         PrintWriter sortieServerData = null;
 
-        sortieSolution = new PrintWriter(new FileWriter(path+"/Solution/"+initial_config+"/"+scenario+"_"+initial_config+"_"+id+"_"+str+"_"+rerun+"_"+threshold+"_"+cap+"vcpu_"+t+"_"+velocity+"_"+variation+".txt"));
-        sortieServerData = new PrintWriter(new FileWriter(path+"/ServerData/"+initial_config+"/"+scenario+"_"+initial_config+"_"+id+"_"+str+"_"+rerun+"_"+threshold+"_"+cap+"vcpu_"+t+"_"+velocity+"_"+variation+".txt"));
+        sortieSolution = new PrintWriter(new FileWriter(path+"\\Solution\\"+initial_config+"\\"+scenario+"_"+initial_config+"_"+id+"_"+str+"_"+rerun+"_"+threshold+"_"+cap+"vcpu_"+t+"_"+velocity+"_"+variation+".txt"));
+        sortieServerData = new PrintWriter(new FileWriter(path+"\\ServerData\\"+initial_config+"\\"+scenario+"_"+initial_config+"_"+id+"_"+str+"_"+rerun+"_"+threshold+"_"+cap+"vcpu_"+t+"_"+velocity+"_"+variation+".txt"));
        
                                                                                            
         System.out.println(" "+initial_config);
@@ -434,7 +434,7 @@ public class GeneticPenalty_Dynamic
    }
    void writeLatencyDistribution(Chromosome best,int id,String str,int threshold,int rerun,double W[][][],int C[][],double Dn[][][],int Dmax,String path,float variation)
    {
-        String filename=path+"/CDF/"+initial_config+"/"+scenario+"_"+str+" Output"+initial_config+"_"+generations+"_"+id+"_"+threshold+"_"+rerun+"_"+cap+"vcpu_"+t+"_"+velocity+"_"+variation+".txt";
+        String filename=path+"\\CDF\\"+initial_config+"\\"+scenario+"_"+str+" Output"+initial_config+"_"+generations+"_"+id+"_"+threshold+"_"+rerun+"_"+cap+"vcpu_"+t+"_"+velocity+"_"+variation+".txt";
      
        
          try 
@@ -534,8 +534,8 @@ public class GeneticPenalty_Dynamic
 //            sortieProfiling = new PrintWriter(new FileWriter("/nfs/homes/amira.rayane.benamer/Results/Static/Profiling/"+sets+"/"+str+" Profiling"+sets+"_"+generations+"_"+id+"_"+threshold+"_"+rerun+"_"+C[0][0]+"vcpu.txt"));
 //            sortiePercent = new PrintWriter(new FileWriter("/nfs/homes/amira.rayane.benamer/Results/Static/Percent/"+sets+"/"+str+" Percent"+sets+"_"+generations+"_"+id+"_"+threshold+"_"+rerun+"_"+C[0][0]+"vcpu.txt"));
         
-             sortie = new PrintWriter(new FileWriter(path+"/Synthese/"+initial_config+"/"+scenario+"_"+str+"_"+id+"_"+rerun+"_"+threshold+"_"+velocity+"_"+variation+"_"+cap+"vcpu.txt"));
-             sortiePercent = new PrintWriter(new FileWriter(path+"/Percent/"+initial_config+"/"+scenario+"_"+str+"_"+id+"_"+rerun+"_"+threshold+"_"+velocity+"_"+variation+"_"+cap+"vcpu.txt"));
+             sortie = new PrintWriter(new FileWriter(path+"\\Synthese\\"+initial_config+"\\"+scenario+"_"+str+"_"+id+"_"+rerun+"_"+threshold+"_"+velocity+"_"+variation+"_"+cap+"vcpu.txt"));
+             sortiePercent = new PrintWriter(new FileWriter(path+"\\Percent\\"+initial_config+"\\"+scenario+"_"+str+"_"+id+"_"+rerun+"_"+threshold+"_"+velocity+"_"+variation+"_"+cap+"vcpu.txt"));
         
 
 
